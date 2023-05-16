@@ -28,14 +28,15 @@ class Movie {
 class Genre {
     //attributi
     public $genere;
-
+    
+    //costruttore
     function __construct($_genres)
     {
         $this->genere = $_genres;
     }
 }
 
-$first_movie = new Movie( new Genre(["demenziale","comico","inarrestabile"]), "80 min", "Una Notte Da Leoni", "un gruppo di ragazzi ormai alle prese con l'età adulta passeranno un addio al nubilato speciale.");
+$first_movie = new Movie( new Genre(["demenziale","comico","inarrestabile",]), "80 min", "Una Notte Da Leoni", "un gruppo di ragazzi ormai alle prese con l'età adulta passeranno un addio al nubilato speciale.");
 
 $second_movie = new Movie(new Genre(["horror"]), "80 min", "Non Aprite quella Porta", "uno che sta poco bene mentalmente avendo la famiglia altrettanto malata ora si diletta a scassare la gente e rubargli la faccia")
 ?>
@@ -50,9 +51,9 @@ $second_movie = new Movie(new Genre(["horror"]), "80 min", "Non Aprite quella Po
 </head>
 <body>
     <h2>primo film</h2>
-    <?php echo $first_movie->moviePrint() ?>
+    <?php $first_movie->moviePrint() ?>
 
     <h2>secondo film</h2>
-    <?php echo $second_movie->moviePrint() ?>
+    <?php $second_movie->moviePrint() ?>
 </body>
 </html>
