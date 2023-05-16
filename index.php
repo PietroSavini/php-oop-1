@@ -16,17 +16,17 @@ class Movie {
 
     //methods
     public function moviePrint(){
-        echo 'titolo:' . $this->title . "<br>";
-        echo 'durata:' . $this->duration . "<br>";
-        echo 'descrizione:' . $this->description . "<br>";
-        echo 'generi:' . $this->genre . "<br>";
+        echo 'titolo: ' . $this->title . "<br>";
+        echo 'durata: ' . $this->duration . "<br>";
+        echo 'descrizione: ' . $this->description . "<br>";
+        echo 'generi: ' . implode(", ",$this->genre) . "<br>";
     }
 
 }
 
-$first_movie = new Movie("comico", "80 min", "Una Notte Da Leoni", "un gruppo di ragazzi ormai alle prese con l'età adulta passeranno un addio al nubilato speciale.");
+$first_movie = new Movie(["comico","demenziale"], "80 min", "Una Notte Da Leoni", "un gruppo di ragazzi ormai alle prese con l'età adulta passeranno un addio al nubilato speciale.");
 
-$second_movie = new Movie("horror", "80 min", "Non Aprite quella Porta", "uno che sta poco bene mentalmente avendo la famiglia altrettanto malata ora si diletta a scassare la gente e rubargli la faccia")
+$second_movie = new Movie(["horror","splatter"], "80 min", "Non Aprite quella Porta", "uno che sta poco bene mentalmente avendo la famiglia altrettanto malata ora si diletta a scassare la gente e rubargli la faccia")
 ?>
 
 <!DOCTYPE html>
